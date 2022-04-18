@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,13 +98,26 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "registration"
+  "defaultProject": "registration",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
