@@ -28,7 +28,8 @@ import { CreeSortiedocComponent } from './Traitement 1ere age/inscription-sortie
 import { ModifierSortieDocComponent } from './Traitement 1ere age/inscription-sortie-doc/modifier-sortie-doc/modifier-sortie-doc.component';
 import { ConsulterSortieDocComponent } from './Traitement 1ere age/inscription-sortie-doc/consulter-sortie-doc/consulter-sortie-doc.component';
 import { DestructionDocumentComponent } from './Traitement 1ere age/destruction-document/destruction-document.component';
-import { AjoutDateDestructionComponent } from './Traitement 1ere age/ajout-date-destruction/ajout-date-destruction.component';
+import { InventaireDocument2emeageComponent } from './Traitement 1ere age/inventaire-document2emeage/inventaire-document2emeage.component';
+import { DemandeDeVersementComponent } from './Traitement 1ere age/demande-de-versement/demande-de-versement.component';
 
 
 const routes: Routes = [
@@ -60,14 +61,15 @@ const routes: Routes = [
   {path:'creeSortie1ere',component:CreeSortiedocComponent},
   {path:'modifierSortie1ere/:id',component:ModifierSortieDocComponent},
   {path:'ConsulterSortie1ere/:id',component:ConsulterSortieDocComponent},
+  {path:'demandedeversement',component:DemandeDeVersementComponent},
+  //
   
   {
    path:'destruction-document/:id',
    component:DestructionDocumentComponent
- },{
-  path:'ajoute-date-destruction',
-  component:AjoutDateDestructionComponent
-},
+ },
+
+{path:'inventaire',component:InventaireDocument2emeageComponent},
 
 
   {path:'login',component:LoginComponent},

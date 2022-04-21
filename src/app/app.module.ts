@@ -59,10 +59,13 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 
 import {MatCardModule} from "@angular/material/card";
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
-import { AjoutDateDestructionComponent } from './Traitement 1ere age/ajout-date-destruction/ajout-date-destruction.component';
+
 import { DestructionDocumentComponent } from './Traitement 1ere age/destruction-document/destruction-document.component';
+import { InventaireDocument2emeageComponent } from './Traitement 1ere age/inventaire-document2emeage/inventaire-document2emeage.component';
+
+import { DemandeDeVersementComponent } from './Traitement 1ere age/demande-de-versement/demande-de-versement.component';
 
 @NgModule({
   declarations: [
@@ -98,8 +101,10 @@ import { DestructionDocumentComponent } from './Traitement 1ere age/destruction-
     ModifierSortieDocComponent,
     SignupComponent,
     SigninComponent,
-    AjoutDateDestructionComponent,
     DestructionDocumentComponent,
+    InventaireDocument2emeageComponent,
+
+    DemandeDeVersementComponent,
 
    
    
@@ -149,7 +154,7 @@ import { DestructionDocumentComponent } from './Traitement 1ere age/destruction-
   ],
   providers: [ 
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
-        JwtHelperService
+        JwtHelperService,[DatePipe],
   ],
   bootstrap: [AppComponent],
   

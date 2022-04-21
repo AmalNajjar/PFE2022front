@@ -1,0 +1,39 @@
+<h1 mat-dialog-title>Envoyer une demande de versement</h1>
+<br>
+<div mat-dialog-content>
+<form #enregForm="ngForm" (ngSubmit)="onSubmit()">
+
+
+
+<mat-form-field  appearance="outline">
+<mat-label  for="Numerodemande" >Numero Demande: </mat-label>
+<input  matInput placeholder="" type="number" id="num_dde" 
+ name="num" [(ngModel)]="demande.num_dde"  required #num_dde="ngModel"           
+[class.is-invalid]=" num_dde.invalid && num_dde.touched"   >
+<small class="text-danger" [class.d-none]=" num_dde.valid ||  num_dde.untouched"> Numero Demande is required field</small> 
+</mat-form-field>
+
+<mat-form-field  appearance="outline">
+    <mat-label  for=" date_dde" >Date de la demande : </mat-label>
+    <input  matInput placeholder="" type="date" id=" date_dde" 
+     name="datedde" [(ngModel)]=" demande. date_dde"  required #date_dde="ngModel"           
+    [class.is-invalid]=" date_dde.invalid && date_dde.touched"   >
+    <small class="text-danger" [class.d-none]=" date_dde.valid || date_dde.untouched">Date de la demande is required field</small> 
+    </mat-form-field>
+
+    <mat-form-field  appearance="outline">
+        <mat-label  for="objet" >Objet: </mat-label>
+        <input matInput placeholder="" type="text" id="objet" 
+         name="obj" [(ngModel)]="demande.objet"  required #objet="ngModel"           
+        [class.is-invalid]="objet.invalid &&objet.touched"   >
+        <small class="text-danger" [class.d-none]="objet.valid || objet.untouched">Objet is required field</small> 
+        </mat-form-field>
+
+        <mat-form-field  appearance="outline">
+            <mat-label  for="nbrCarton" >Nombre Carton: </mat-label>
+            <input matInput placeholder="" type="number" id="nbrCarton" 
+             name="nbr" [(ngModel)]="demande.nbrCarton"  required #nbrCarton="ngModel"           
+            [class.is-invalid]="nbrCarton.invalid &&nbrCarton.touched"   >
+            <small class="text-danger" [class.d-none]="nbrCarton.valid || nbrCarton.untouched">Nombre Carton is required field</small> 
+            </mat-form-field>
+        

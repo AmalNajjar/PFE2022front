@@ -63,8 +63,24 @@
                     <td mat-cell *matCellDef="let suividocument">{{suividocument.date_d_entree_Du_Document}}</td>
                   </ng-container>
               
+                  <ng-container matColumnDef="codedocument">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header="codedocument" >
+                      code document 
+                    </th>
+                    <td mat-cell *matCellDef="let suividocument">{{suividocument.codedocument}}</td>
+                  </ng-container>
+                  <ng-container matColumnDef="numero_d_ordre">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header="numero_d_ordre" >numero d'ordre
+                     </th>
+                    <td mat-cell *matCellDef="let suividocument">{{suividocument.numero_d_ordre}}</td>
+                  </ng-container>
 
-
+                  <ng-container matColumnDef="emplacement_physique">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header="emplacement_physique" >
+                      Emplacement physique
+                     </th>
+                    <td mat-cell *matCellDef="let suividocument">{{suividocument.emplacement_physique}}</td>
+                  </ng-container>
                   <ng-container matColumnDef="nombre_De_documents">
                     <th mat-header-cell *matHeaderCellDef  mat-sort-header="nombre_De_documents">
                       Nombre de Documents
@@ -88,12 +104,12 @@
                     <td mat-cell *matCellDef="let suividocument"> {{suividocument.libelleDirection.libelleDirection}} </td>
                   </ng-container-->
 
-                  <ng-container matColumnDef="designation_Nomenclature">
+                  <!--ng-container matColumnDef="designation_Nomenclature">
                     <th mat-header-cell *matHeaderCellDef  mat-sort-header="designation_Nomenclature">
                     Designation Nomenclature
                     </th>
                     <td mat-cell *matCellDef="let suividocument"> {{suividocument.designation_Nomenclature.designation_Nomenclature}} </td>
-                  </ng-container>
+                  </ng-container-->
 
 
 
@@ -104,7 +120,7 @@
                       <button mat-icon-button (click)="openDialoggg(row)" color="warn" >
                             <mat-icon>Oui</mat-icon>
                         </button>  
-                        <button mat-icon-button color="primary">
+                        <button mat-icon-button (click)="openDialogggg(row)" color="primary">
                             <mat-icon>Non</mat-icon>
                         </button> 
                       </td></ng-container>

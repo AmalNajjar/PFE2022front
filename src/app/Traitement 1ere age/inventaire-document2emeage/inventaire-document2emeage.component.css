@@ -16,7 +16,9 @@ h1 {
     box-shadow: 3px 3px 0px transparent;
     transition: 0.5s;
     }
-
+.width{
+    height: -300px auto;
+}
    
 
 #custom-search-input {
@@ -83,12 +85,12 @@ table {
   width: 100%;
 }
 .container{
-  max-width:12000px;
+  max-width:1200px;
   margin: 0 auto;
 }
 a{
     width:245px; 
-    height: 37px;
+    height:3px;
     font-size:15px;
 }
 .c1{
@@ -97,6 +99,16 @@ a{
 
 }
 
-td{
-  height: 65px;
-}
+th{
+    height: -15px;
+  }
+  td{
+      height: 10px;
+  }
+.btn {
+  background-color: #6a9ce6;
+  width: 200px ;
+  height: 35px;
+  margin-right: 1090px;
+  font-size: 15px;
+  }

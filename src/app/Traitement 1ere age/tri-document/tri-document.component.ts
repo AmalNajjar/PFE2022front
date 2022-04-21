@@ -13,6 +13,7 @@ import { FicheDeRenseignementComponent } from '../fiche-de-renseignement/fiche-d
 import { Nomenclature } from 'src/app/nomenclature';
 import { Direction } from 'src/app/direction';
 import { DestructionDocumentComponent } from '../destruction-document/destruction-document.component';
+import { InventaireDocument2emeageComponent } from '../inventaire-document2emeage/inventaire-document2emeage.component';
 @Component({
   selector: 'app-tri-document',
   templateUrl: './tri-document.component.html',
@@ -25,7 +26,7 @@ export class TriDocumentComponent implements OnInit {
  suividocument=new SuiviDocument()
  nomenclatures:Nomenclature []=[];
  direction: Direction []=[];
-  displayedColumns: string[] = ['id','chapitre_comptable','numero_document','nombre_De_pages','date_De_creation_Du_Document','date_d_entree_Du_Document','nombre_De_documents','limite_de_conservation_1ere_age','Destruction'];
+  displayedColumns: string[] = ['id','chapitre_comptable','numero_document','nombre_De_pages','date_De_creation_Du_Document','date_d_entree_Du_Document','codedocument','numero_d_ordre','emplacement_physique','nombre_De_documents','limite_de_conservation_1ere_age','Destruction'];
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -55,14 +56,22 @@ export class TriDocumentComponent implements OnInit {
 
 
     openDialoggg(item : any) { 
+      console.log(item);
       this.dialog.open(DestructionDocumentComponent, {
         width:'62%',
-        data : {
-          suividocument : item
-        }
+        height:'62%',
+        data : [item]
       });   
     }
-   
+    openDialogggg(item : any) { 
+      console.log(item);
+      this.dialog.open(InventaireDocument2emeageComponent, {
+        width:'77%',
+        height:'70%',
+        data : [item]
+        });
+      }   
+
     sortData(sort: Sort) {
     const data = this.doc.slice();
     if (!sort.active || sort.direction === '') {

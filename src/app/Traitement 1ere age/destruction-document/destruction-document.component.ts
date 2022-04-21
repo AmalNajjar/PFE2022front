@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 
 import { SuiviDocument } from 'src/app/suivi-document';
 import { SuiviDocumentService } from 'src/app/service/suivi-document.service';
-import { AjoutDateDestructionComponent } from '../ajout-date-destruction/ajout-date-destruction.component';
 
 
 @Component({
@@ -18,7 +17,7 @@ import { AjoutDateDestructionComponent } from '../ajout-date-destruction/ajout-d
 export class DestructionDocumentComponent implements OnInit {
   doc:SuiviDocument[]=[];
  suividocument=new SuiviDocument()
-  searchValue!:string;
+
  
   displayedColumns: string[] = ['id','chapitre_comptable','code','numero','date_De_creation_Du_Document','dateDestruction','libelle','action'];
   dataSource!: MatTableDataSource<any>;
@@ -40,54 +39,11 @@ export class DestructionDocumentComponent implements OnInit {
    }
   
  
- openDialog() {
-   this.dialog.open(AjoutDateDestructionComponent, {
-    width:'35%'
-   });
- }
+
 
  
-/*
- openDialogg(item : any) { 
 
-   this.dialog.open(DeleteStructureComponent, {
-     width:'41%',
-     data : {
-       structure : item
-     }
-   });   
- }
 
- 
- openDialoggg(item : any) {  
-   this.dialog.open(ConsulterStructureComponent, {
-     width:'41%',
-     data : {
-       structure : item
-     }
-   });
- }
-
-   openDialogggg(item : any) {  
-     this.dialog.open(UpdateStructureComponent, {
-       width:'45%',
-       data : {
-         structure : item
-       }
-     });
-
-   }*/
-   applyFilter(event: Event) {
-     const filterValue = (event.target as HTMLInputElement).value;
-     this.dataSource.filter = filterValue.trim().toLowerCase();
- 
-     if (this.dataSource.paginator) {
-       this.dataSource.paginator.firstPage();
-     }
-   }
  
 }
 
-function AjouteDateDestructionComponent(AjouteDateDestructionComponent: any, arg1: { width: string; }) {
-  throw new Error('Function not implemented.');
-}

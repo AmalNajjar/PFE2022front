@@ -18,18 +18,6 @@ export class CreeDocumentComponent implements OnInit {
   constructor(private _service:SuiviDocumentService,private formBuilder : FormBuilder) { }
 
   ngOnInit(): void {
-    this.productForm=this.formBuilder.group({
-      id:['',Validators.required],
-      chapitre_comptable:['',Validators.required],
-      numero_document:['',Validators.required],
-      nombre_De_pages:['',Validators.required],
-   
-      date_De_creation_Du_Document:['',Validators.required],
-      date_d_entree_Du_Document: ['', Validators.required],
-      nombre_De_documents :['', Validators.required],
-      limite_de_conservation_1ere_age: ['', Validators.required]
-  
-  })
   }
   public  onSubmit(){ 
 

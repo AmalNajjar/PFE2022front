@@ -67,6 +67,33 @@
             <small class="text-danger" [class.d-none]="limite_de_conservation_1ere_age.valid || limite_de_conservation_1ere_age.untouched">Limite de conservation 1ere age is required field</small> 
             </mat-form-field>
 
+            <mat-form-field  appearance="outline">
+                <mat-label  for="codedocument" >Code document: </mat-label>
+                <input formConroleName="codedocument" matInput placeholder="" type="number" id="codedocument" 
+                 name="cc" [(ngModel)]="suividocument.codedocument"  required #codedocument="ngModel"           
+                [class.is-invalid]="codedocument.invalid &&codedocument.touched"   >
+                <small class="text-danger" [class.d-none]="codedocument.valid ||codedocument .untouched"> is required field</small> 
+                </mat-form-field>
+
+                <mat-form-field  appearance="outline">
+                    <mat-label  for="numero_d_ordre" >Numéro d'ordre: </mat-label>
+                    <input formConroleName="numero_d_ordre" matInput placeholder="" type="number" id="numero_d_ordre" 
+                     name="num" [(ngModel)]="suividocument.numero_d_ordre"  required #numero_d_ordre="ngModel"           
+                    [class.is-invalid]="numero_d_ordre.invalid &&numero_d_ordre.touched"   >
+                    <small class="text-danger" [class.d-none]="numero_d_ordre.valid || numero_d_ordre.untouched"> is required field</small> 
+                    </mat-form-field>
+
+
+
+                    <mat-form-field  appearance="outline">
+                        <mat-label  for="emplacement_physique" >Emplacement physique: </mat-label>
+                        <input formConroleName="emplacement_physique" matInput placeholder="" type="number" id="emplacement_physique" 
+                         name="emplacement" [(ngModel)]="suividocument.emplacement_physique"  required #emplacement_physique="ngModel"           
+                        [class.is-invalid]="emplacement_physique.invalid &&emplacement_physique.touched"   >
+                        <small class="text-danger" [class.d-none]="emplacement_physique.valid || emplacement_physique.untouched"> is required field</small> 
+                        </mat-form-field>
+                
+
             <!--mat-form-field  appearance="outline">
                 <mat-label  for=" libelleDirection" > libelle Direction: </mat-label>
                 <input formConroleName=" libelleDirection" matInput placeholder="" type="text" id=" libelleDirection" 
